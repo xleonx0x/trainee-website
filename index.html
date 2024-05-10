@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="./style.css">
+
+<html lang="en">
+<head>
+    <link href="https://fonts.cdnfonts.com/css/aller" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris's Website</title>
+</head>
+
+<body>
+    <div class="container" onclick="effect()">
+        <div class="cursor"></div>
+        <button onclick="menu()" onmouseover="hover()" onmouseleave="unhover()" id="circle">
+            <p>Chris!</p>
+        </button>
+        <div id="menubtn-container">
+            <button class="menubtn" id="btn1" onclick="open_menu(1)" onmouseover="menu_hover(1)" onmouseleave="menu_unhover(1)"> <p>About Me</p></button>
+            <button class="menubtn" id="btn2" onclick="open_menu(2)" onmouseover="menu_hover(2)" onmouseleave="menu_unhover(2)"> <p>Interests</p></button>
+            <button class="menubtn" id="btn3" onclick="open_menu(3)" onmouseover="menu_hover(3)" onmouseleave="menu_unhover(3)"> <p>Hobbies</p></button>
+            <button class="menubtn" id="btn4" onclick="open_menu(4)" onmouseover="menu_hover(4)" onmouseleave="menu_unhover(4)"> <p>Links</p></button>
+        </div>
+        <div id="section-main">
+            <div id="section-container1">
+                <h1>Who am I?</h1>
+                <p>Hi, I'm Chris if it wasn't obvious enough but nice to meet you this is my first attempt at making a somewhat bearable website. Below are some general facts about me!</p>
+                <ul>
+                    <li>Name: Chris Wong</li>
+                    <li>Age: 18</li>
+                    <li>Degree: 1st Year Compsci</li>
+                    <li>Goals: Making a project I am genuinely proud of and makes a difference in people's life</li>
+                </ul>
+            </div>
+            <div id="section-container2">
+                <h1>Interests</h1>
+                <p>My interests can be listed in no particular order</p>
+                <ul>
+                    <li>Reading Manga (Some goated mangas: Berserk, 20th Century Boys, AOT, Vinland Saga)</li>
+                    <li>Sleeping</li>
+                    <li>Procrastinating</li>
+                    <li>More sleeping</li>
+                    <li>More sleeping</li>
+                    <li>More sleeping</li>
+                    <li>More sleeping</li>
+                </ul>
+                <p>I think you get the gist but feel free to drop some manga recs :D</p>
+            </div>
+            <div id="section-container3">
+                <h1>Hobbies</h1>
+                <p>Currently my hobbies have been sidelined due to school but I am keen to get into</p>
+                <ul>
+                    <li>PC Building</li>
+                    <li>Hiking</li>
+                    <li>Meeting new people</li>
+                    <li>Travelling</li>
+                </ul>
+            </div>
+            <div id="section-container4">
+                <div id="grid">
+                    <button id="discord" onclick="myFunction()">Discord</button>
+                    <button id="linkedin" onclick="window.open('https://www.linkedin.com/in/chris-wong-219099264/', '_blank')">Linkedin</button>
+                    <button id="github" onclick="window.open('https://github.com/xleonx0x?tab=repositories', '_blank') ">Github</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="circle-effect"></div>
+</body>
+
+</html>
+
+<script>
+
+let menustate = 0;
+let droplet = 0;
+
+const circle = document.getElementById("circle");
+const menubtns = document.getElementsByClassName("menubtn");
+const menubtnArray = Array.from(menubtns);
+
+function open_window(url) {
+    window.location.href = url;
+}
+
+function myFunction() {
+  var copyText = ".pandrr";
+  navigator.clipboard.writeText(copyText);
+}
+
+function menu() {
+    if (menustate == 0) { // opens menu
+        circle.style.transform = "translate(-130%,-50%)";
+        menubtnArray.forEach(button => {
+            setTimeout(() => {
+                button.style.visibility = "visible";
+            }, 50);
+        });
+        menustate = 1;
+    } else { // closes menu
+        circle.style.transform = "translate(-50%,-50%)";
+        menubtnArray.forEach(button => {
+            setTimeout(() => {
+                button.style.visibility = "hidden";
+            }, 100);
+        });
+        closeall();
+        menustate = 0
+    }
+    console.log("hi");
+}
+
+const cursor = document.querySelector(".cursor");
+const circleeffect = document.getElementById("circle-effect");
+const body = document.body;
+
+document.body.addEventListener("mousemove", moveCursor);
+
+const menu1 = document.getElementById("section-container1");
+const menu2 = document.getElementById("section-container2");
+const menu3 = document.getElementById("section-container3");
+
+function open_menu(id) {
+    var menu = document.getElementById("section-container" + id);
+    if (menu.style.display != "block") {
+        closeall();
+        menu.classList.add('slide-in-animation');
+        menu.style.display = "block";
+    } else {
+        menu.classList.remove('slide-in-animation');
+        menu.classList.add('slide-out-animation');
+        setTimeout(() => {
+            menu.style.display = "none"; 
+        }, 750);
+    }
+}
+
+function closeall() {
+    for (let i = 1; i < 5; i++) {
+        var menu = document.getElementById("section-container" + i);
+        menu.style.display = "none";
+    }
+}
+
+function hover() {
+    if (menustate == 0) {
+        circle.style.transform = "translate(-50%,-50%) scale(1.1,1.1)";
+    } else {
+        circle.style.transform = "translate(-130%,-50%) scale(1.1,1.1)";
+    }
+}
+
+function menu_hover(id) {
+    var btn = document.getElementById("btn" + id);
+    btn.style.transform = "translate(-130%,-50%) scale(1.1,1.1)";
+}
+
+function menu_unhover(id) {
+    var btn = document.getElementById("btn" + id);
+    btn.style.transform = "translate(-130%,-50%) scale(1,1)";
+}
+
+function unhover() {
+    if (menustate == 0) {
+        circle.style.transform = "translate(-50%,-50%) scale(1,1)";
+    } else {
+        circle.style.transform = "translate(-130%,-50%) scale(1,1)";
+    }}
+
+</script>
