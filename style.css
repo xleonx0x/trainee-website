@@ -87,47 +87,11 @@ body {
     overflow: hidden;
 }
 
-#section-container1 {
-    background-color: #075a74;
-    height: 450px;
-    width: 500px;
-    border-radius: 10%;
-    padding: 20px;
-    bottom: 15%;
-    margin: 20px;
-    margin-right: 150px;
-    border: 15px white solid;
-    display: none;
-}
-
-#section-container2 {
-    background-color: #075a74;
-    height: 450px;
-    width: 500px;
-    border-radius: 10%;
-    padding: 20px;
-    bottom: 15%;
-    margin: 20px;
-    margin-right: 150px;
-    border: 15px white solid;
-    display: none;
-}
-
-#section-container3 {
-    background-color: #075a74;
-    height: 450px;
-    width: 500px;
-    border-radius: 10%;
-    padding: 20px;
-    bottom: 15%;
-    margin: 20px;
-    margin-right: 150px;
-    border: 15px white solid;
-    display: none;
-}
-
+#section-container1, 
+#section-container2, 
+#section-container3, 
 #section-container4 {
-    background-color: #1e0d35;
+    background-color: #075a74;
     height: 450px;
     width: 500px;
     border-radius: 10%;
