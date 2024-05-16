@@ -2,6 +2,7 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: 'Aller', sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -28,6 +29,11 @@ body {
     border: 35px solid white;
     transition: transform 0.3s ease;
     z-index: 2;
+}
+
+button:active {
+    outline: none;
+    box-shadow: none;
 }
 
 @keyframes gradient {
@@ -208,7 +214,7 @@ p {
         border: 20px solid white;
     }
     #circle p {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     #menubtn-container {
@@ -239,7 +245,7 @@ p {
     .menubtn p {
         margin: 0;
         padding-left: 50px;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: bold;
         color: white;
         text-shadow: 1px 1px 3px black;
@@ -248,7 +254,7 @@ p {
     #section-main {
         float: right;
         position: relative;
-        top: 30px;
+        top: 50px;
         left: 140px;
         bottom: 0px;
         color: whitesmoke;
@@ -260,14 +266,14 @@ p {
     #section-container3, 
     #section-container4 {
         background-color: #075a74;
-        height: 150px;
-        width: 150px;
+        height: 130px;
+        width: 130px;
         border-radius: 10%;
         padding: 8px;
         bottom: 15%;
         margin: 20px;
         margin-right: 150px;
-        border: 15px white solid;
+        border: 10px white solid;
         display: none;
         font-size: 6px;
     }
