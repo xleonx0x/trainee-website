@@ -200,3 +200,91 @@ p {
 #discord:hover {
     transform: scale("1.01,1.01");
 }
+
+@media (max-width: 600px) {
+    #circle {
+        height: 200px;
+        width: 200px;
+        border: 20px solid white;
+    }
+    #circle p {
+        font-size: 50px;
+    }
+
+    #menubtn-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 2px;
+        top:37%;
+        left: 63%;
+        width: 200px;
+    }
+
+    .menubtn {
+        width: 150px;
+        height: 30px;
+        animation: gradient 15s ease infinite;
+        transform: skew(10deg);
+        border-width: 0px;
+        border-radius: 0 0 10px 10px;
+        z-index: 1;
+        visibility: hidden;
+        transform: translate(-130%,-50%);
+        border: 15px white solid;
+        border: 5px rgb(102, 101, 101) solid;
+        transition: transform 0.3s ease;
+    }
+
+    .menubtn p {
+        margin: 0;
+        padding-left: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 1px 1px 3px black;
+    }
+     
+    #section-main {
+        float: right;
+        position: relative;
+        top: 30px;
+        left: 140px;
+        bottom: 0px;
+        color: whitesmoke;
+        overflow: hidden;
+    }
+    
+    #section-container1, 
+    #section-container2, 
+    #section-container3, 
+    #section-container4 {
+        background-color: #075a74;
+        height: 150px;
+        width: 150px;
+        border-radius: 10%;
+        padding: 8px;
+        bottom: 15%;
+        margin: 20px;
+        margin-right: 150px;
+        border: 15px white solid;
+        display: none;
+        font-size: 6px;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 25px;
+    }
+    
+    #grid button {
+        border-radius: 25%;
+        height: 30px;
+        width: 150px;
+        font-family: 'Aller', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+}
