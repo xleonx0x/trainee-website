@@ -2,7 +2,7 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: 'Aller', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .container {
@@ -214,7 +214,7 @@ p {
         border: 20px solid white;
     }
     #circle p {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     #menubtn-container {
