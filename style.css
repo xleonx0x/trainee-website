@@ -218,7 +218,7 @@ p {
         border: 20px solid white;
     }
     #circle p {
-        font-size: 15px;
+        font-size: 35px;
     }
 
     #menubtn-container {
@@ -232,7 +232,7 @@ p {
     }
 
     .menubtn {
-        width: 150px;
+        width: 140px;
         height: 30px;
         animation: gradient 15s ease infinite;
         transform: skew(10deg);
@@ -248,7 +248,7 @@ p {
 
     .menubtn p {
         margin: 0;
-        padding-left: 50px;
+        padding-left: 60px;
         font-size: 12px;
         font-weight: bold;
         color: white;
@@ -285,13 +285,13 @@ p {
     #grid {
         display: grid;
         grid-template-columns: auto;
-        grid-gap: 25px;
+        grid-gap: 20px;
     }
     
     #grid button {
         border-radius: 25%;
         height: 30px;
-        width: 150px;
+        width: 130px;
         font-family: 'Aller', sans-serif;
         font-size: 15px;
         font-weight: bold;
